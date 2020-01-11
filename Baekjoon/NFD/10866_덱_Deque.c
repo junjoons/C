@@ -89,7 +89,7 @@ void Push_front(list *myl, int data)
 	newNode->data = data;
 	newNode->next = newNode->prev = NULL;
 
-	if (myl->front == NULL || myl->back == NULL)
+	if (myl->size == 0)
 		myl->front = myl->back = newNode;
 	else
 	{
@@ -106,7 +106,7 @@ void Push_back(list *myl, int data)
 	newNode->data = data;
 	newNode->next = newNode->prev = NULL;
 
-	if (myl->front == NULL || myl->back == NULL)
+	if (myl->size == 0)
 		myl->front = myl->back = newNode;
 	else
 	{
