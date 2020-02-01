@@ -4,6 +4,8 @@
 int min(int a, int b) {
 	return a < b ? a : b;}
 
+
+
 int main()
 {
 	int arr[100001] = { 0,0,1,1,2,3 };
