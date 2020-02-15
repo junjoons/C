@@ -6,7 +6,7 @@ int main()
 	long long int dp[91][2] = { {0, 0}, {0, 1}, {1, 0}, {1, 1}, };
 	int n;
 	scanf("%d", &n);
-
+		
 	for (int i = 4; i <= n; i++)
 	{
 		for (int j = 0; j < 2; j++)

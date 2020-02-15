@@ -17,11 +17,11 @@ int main()
 		for (int j = 0; j < 2; j++)
 		{
 			for (int k = 0; k < n; k++)
-			scanf("%d", &dp[j][k]);
+				scanf("%d", &dp[j][k]);
 		}
 		for (int k = 0; k < 2; k++)
 		{
-			for (int j = 0; j< n; j++)
+			for (int j = 0; j < n; j++)
 			{
 				if (k == 0)
 				{
@@ -34,15 +34,15 @@ int main()
 					}
 					else if (j == n - 1)
 					{
-						if (dp[k][j] > dp[k +1][j] && dp[k][j] > dp[k][j - 1])
-							dp[k +1][j] = dp[k][j -1] = 0;
+						if (dp[k][j] > dp[k + 1][j] && dp[k][j] > dp[k][j - 1])
+							dp[k + 1][j] = dp[k][j - 1] = 0;
 						else
 							dp[k][j] = 0;
 					}
 					else
 					{
-						if (dp[k][j] > dp[k][j-1] && dp[k][j] > dp[k][j + 1] && dp[k][j]>dp[k+1][j])
-							dp[k][j+1] = dp[k][j - 1] = dp[k+1][j] = 0;
+						if (dp[k][j] > dp[k][j - 1] && dp[k][j] > dp[k][j + 1] && dp[k][j] > dp[k + 1][j])
+							dp[k][j + 1] = dp[k][j - 1] = dp[k + 1][j] = 0;
 						else
 							dp[k][j] = 0;
 					}
@@ -51,15 +51,15 @@ int main()
 				{
 					if (j == 0)
 					{
-						if (dp[k][j] > dp[k -1][j] && dp[k][j] > dp[k][j +1])
-							dp[k - 1][j] = dp[k][j +1] = 0;
+						if (dp[k][j] > dp[k - 1][j] && dp[k][j] > dp[k][j + 1])
+							dp[k - 1][j] = dp[k][j + 1] = 0;
 						else
 							dp[k][j] = 0;
 					}
 					else if (j == n - 1)
 					{
-						if (dp[k][j] > dp[k - 1][j] && dp[k][j] > dp[k][j-1])
-							dp[k -1][j] = dp[k][j -1] = 0;
+						if (dp[k][j] > dp[k - 1][j] && dp[k][j] > dp[k][j - 1])
+							dp[k - 1][j] = dp[k][j - 1] = 0;
 						else
 							dp[k][j] = 0;
 					}
